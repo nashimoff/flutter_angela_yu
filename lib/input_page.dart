@@ -17,7 +17,6 @@ class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
 }
-
 class _InputPageState extends State<InputPage> {
 
   Gender ? selectedGender;
@@ -35,6 +34,11 @@ class _InputPageState extends State<InputPage> {
             children: <Widget>[
               Expanded(
                 child: ReusableCard(
+                  onPress: (){
+                    setState(() {
+                      selectedGender = Gender.male;
+                    });
+                  },
                   colour: selectedGender == Gender.male ? activeCardColour : inactiveCardColour,
                   cardChild: IconContent(
                     icon: FontAwesomeIcons.mars,
@@ -44,6 +48,11 @@ class _InputPageState extends State<InputPage> {
               ),
               Expanded(
                 child: ReusableCard(
+                  onPress: () {
+                    setState(() {
+                      selectedGender = Gender.female;
+                    });
+                  },
                   colour: selectedGender == Gender.female ? activeCardColour : inactiveCardColour,
                   cardChild: IconContent(
                     icon: FontAwesomeIcons.venus,
