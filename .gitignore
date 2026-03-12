@@ -12,6 +12,13 @@
 .history
 .svn/
 
+# Windows related
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
 # IntelliJ related
 
 *.iml
@@ -45,6 +52,9 @@ build/
 **/android/gradlew.bat
 **/android/local.properties
 **/android/gradle.properties
+**/android/app/build.gradle
+**/android/build.gradle
+**/android/settings.gradle
 **/android/**/GeneratedPluginRegistrant.java
 
 # iOS/XCode related
